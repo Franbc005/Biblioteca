@@ -11,7 +11,7 @@ public class BibliotecaTest {
 
     @BeforeEach
     public void setUp() {
-        // Esto se ejecuta antes de cada @Test, asegurando un estado limpio
+        
         libro = new Libro("Cien años de soledad");
         biblioteca = new Biblioteca();
     }
