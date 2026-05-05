@@ -5,13 +5,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BibliotecaTest {
-
     private Libro libro;
     private Biblioteca biblioteca;
 
     @BeforeEach
-    public void setUp() {
-        // Esto se ejecuta antes de cada @Test, asegurando un estado limpio
+    public void setup() {
         libro = new Libro("Cien años de soledad");
         biblioteca = new Biblioteca();
     }
@@ -31,7 +29,7 @@ public class BibliotecaTest {
     @Test
     public void testPrestarLibroYaPrestadoLanzaExcepcion() {
         libro.prestar();
-        // Verificamos que lance IllegalStateException
+        
         assertThrows(IllegalStateException.class, () -> {
             libro.prestar();
         });
